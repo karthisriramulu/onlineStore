@@ -1,0 +1,40 @@
+<div class="bg-info text-white text-center p-2">
+    <h3>
+        Online Store Admin
+    </h3>
+</div>
+
+<div class="bg-danger mt-2 p-2 text-center text-white" *ngIf="errorMessage != null">
+    {{errorMessage}}
+</div>
+
+<div class="p-2">
+    <form novalidate #form="ngForm" (ngSubmit)="authenticate(form)">
+
+        <!-- Username -->
+        <div class="form-group">
+            <label for="">Name</label>
+            <input class="form-control" name="username" [(ngModel)]="username" required />
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label for="">Password</label>
+            <input class="form-control" type="password" name="password" [(ngModel)]="password" required />
+        </div>
+
+        <div class="text-center">
+
+            <!-- Go Back -->
+            <button class="btn btn-secondary m-1" routerLink="/">
+                Go Back
+            </button>
+
+            <!-- Submit -->
+            <button class="btn btn-primary m-1" type="submit">
+                Log in
+            </button>
+        </div>
+
+    </form>
+</div>

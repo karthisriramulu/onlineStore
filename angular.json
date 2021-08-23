@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "onlineStore"
+    }
+  },
+  "defaultProject": "onlineStore",
+  "cli": {
+    "analytics": "7461875b-a1b9-439e-8387-f9b75ba0309c"
+  }
 }

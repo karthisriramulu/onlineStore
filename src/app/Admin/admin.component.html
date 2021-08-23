@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-dark text-white">
+            <a class="navbar-brand">
+                Online Store
+            </a>
+        </div>
+    </div>
+
+
+    <div class="row mt-2">
+        <div class="col-3">
+            <button class="btn btn-outline-info btn-block" routerLink="/admin/main/products" routerLinkActive="active">
+                Products
+            </button>
+
+            <button class="btn btn-outline-info btn-block" routerLink="/admin/main/orders" routerLinkActive="active">
+                Orders
+            </button>
+
+            <button class="btn btn-outline-info btn-block" (click)="logout()">
+                logout
+            </button>
+        </div>
+
+        <!-- this for render same page -->
+        <div class="col-9">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<!-- table with four column ID, name, category, price -->
+
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of getProducts()">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.category }}</td>
+            <td>{{ item.price | currency:"INR":"symbol":"2.2-2" }}</td>
+            <td>
+                <button class="btn btn-sm btn-warning" [routerLink]="['/admin/main/products/edit',item.id]">
+                    Edit
+                </button>
+
+                <button class="btn btn-sm btn-danger" (click)="deleteProduct(item.id)">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-primary" routerLink="/admin/main/products/create">
+    Create New Product
+</button>
